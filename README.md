@@ -154,7 +154,7 @@ Variables are containers or boxes that store values. Think of them as a place wi
 ### Defining Variables
 Declaring variables is the first step of creating/defining a variable by writing the keyword followed by the variable name.
 
-Then assigning a value to the variable is the next step. However, when defining a variable to be empty for whatever purpose, it's not assigned to any value. 
+Then assigning/initializing the variable is the next step. However, when defining a variable to be empty for whatever purpose, it's not assigned to any value. 
 Let's examine the keywords used to declare or create variables in JavaScript. 
 
 *let*
@@ -212,5 +212,150 @@ var name = 'John Doe';
 In this example, the `name` variable is hoisted to the top of its scope, so `console.log(name)` outputs `undefined` instead of throwing an error.
 
 Conclusively, variables are a fundamental concept in JavaScript, and understanding how to declare, scope, and hoist them is crucial for writing effective code. By following the rules and best practices outlined in this explanation, you'll be well on your way to becoming a proficient JavaScript developer.
+
+<font color="red">More on Scope and Hoisting later</font>
+
+## Data Types in JavaScript
+
+In JavaScript, a data type is a classification of data based on its format, size, and set of values it can hold. Think of it as a tree that can only be defined by its fruits. This is because JavaScript is a dynamically-typed language, which means that the data type of a variable is determined by its value, not by its declaration.
+
+### Dynamic Typing
+In JavaScript, you don't need to declare the data type of a variable before using it. Instead, the data type is determined by the value assigned to the variable. This is known as <font color="green">dynamic typing</font>.
+
+```
+let name = 'John Doe'; // string
+console.log(typeof name); // Output: string
+
+name = 25; // number
+console.log(typeof name); // Output: number
+
+name = true; // boolean
+console.log(typeof name); // Output: boolean
+```
+
+As you can see, the data type of the `name` variable changes based on the value assigned to it.
+
+### Primitive Data Types
+JavaScript has five primitive data types:
+
+1. *Number*: Represents a numerical value, e.g., `42` or `3.14`.
+2. *String*: Represents a sequence of characters, e.g., `'hello'` or `"hello"`.
+3. *Boolean*: Represents a logical value, e.g., `true` or `false`.
+4. *Null*: Represents the absence of any object value, e.g., `null`.
+5. *Undefined*: Represents an uninitialized or non-existent variable, e.g., `undefined`.
+
+### Complex Data Types
+In addition to primitive data types, JavaScript also has complex data types:
+
+1. *Object*: Represents a collection of key-value pairs, e.g., `{ name: 'John Doe', age: 25 }`.
+2. *Array*: Represents a collection of values, e.g., `[1, 2, 3]`.
+3. *Function*: Represents a block of code that can be executed, e.g., `function greet() { console.log('Hello!'); }`.
+
+### Type Checking
+To check the data type of a variable in JavaScript, you can use the `typeof` operator.
+
+```
+let name = 'John Doe';
+console.log(typeof name); // Output: string
+
+let age = 25;
+console.log(typeof age); // Output: number
+
+let isAdmin = true;
+console.log(typeof isAdmin); // Output: boolean
+```
+
+Understanding the different data types in JavaScript is essential for writing effective and efficient code. 
+
+## Booleans and Conditional Statements in JavaScript
+
+### Booleans
+Booleans are a data type in programming that can have one of two values: `true` or `false`. They are commonly used to represent a condition or a decision that is tell if something is true or false, or permit an action as long as some condition is true or false.
+
+#### Boolean Literals
+Boolean literals are the actual values `true` and `false`. They are case-sensitive, so `True` and `False` are not valid boolean literals.
+
+```
+let isAdmin = true; // Valid
+let isGuest = false; // Valid
+let isRunning = True; // Invalid
+let is Gone = False; // Invalid
+```
+
+#### Boolean Expressions
+Boolean expressions are statements that evaluate to a boolean value. That is, any expression that outputs instead of an arithmetic result a boolean result. Usually using comparison and comparison operators. They can be used to make decisions in your code.
+
+```
+let age = 25;
+let isAdult = age >= 18; // evaluates to true
+```
+
+## Conditional Statements
+Conditional statements are used to execute different blocks of code based on conditions or decisions. There are several types of conditional statements in JavaScript.
+
+#### If Statement
+The `if` statement is used to execute a block of code if a condition is true.
+
+```
+let age = 25;
+if (age >= 18) {
+  console.log("You are an adult.");
+}
+```
+
+#### If-Else Statement
+The `if-else` statement is used to execute one block of code if a condition is true and another block of code if the condition is false.
+
+```
+let age = 25;
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+```
+
+#### If-Else-If Statement
+The `if-else-if` statement is used to check multiple conditions and execute different blocks of code based on those conditions.
+
+```
+let age = 25;
+if (age >= 18) {
+  console.log("You are an adult.");
+} else if (age >= 13) {
+  console.log("You are a teenager.");
+} else {
+  console.log("You are a child.");
+}
+```
+
+#### Switch Statement
+The `switch` statement is used to execute different blocks of code based on the value of a variable or expression. Like saying we're considering what's in the variable *day*. In case - "Monday" do this, in case - "Tuesday", do that and so on. 
+
+```
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Today is Monday.");
+    break;
+  case "Tuesday":
+    console.log("Today is Tuesday.");
+    break;
+  default:
+    console.log("Today is not Monday or Tuesday.");
+}
+```
+
+#### %Ternary Operator
+The ternary operator is a shorthand way of writing an `if-else` statement. It consists of three parts: the condition, the value if the condition is true, and the value if the condition is false.
+
+```
+let age = 25;
+let status = age >= 18 ? "adult" : "minor";
+console.log(status); // Output: adult
+```
+
+By mastering these concepts, you can write more efficient, effective, and decision-driven code.
+
 
 
