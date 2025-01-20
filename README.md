@@ -24,3 +24,44 @@ Although prior knowledge of HTML5 and CSS is helpful, it's by no means required.
 
 ## Let's Get Started!
 Welcome to the world of JavaScript where you'll learn how to create dynamic, interactive web experiences. I hope this guide will be well on your way to becoming proficient in JavaScript.
+
+## Printing to the Console
+
+This means to display output of one's code on a specific interface called the console. 
+
+### What is the console?
+The console is like a message board where your computer can display messages. In the context of JavaScript, the console is where you can see the results of your code. You can access the console on any IDE such as VS Code or simple using your browser by right clicking and selecting *inspect*. Head over to console. This can be done on any web page but for practice always use a new tab or an empty HTML file. 
+
+### What is console.log()?
+`console.log()` is a special command in JavaScript that allows developers to send messages to the console. Think of it like sending a note to the message board.
+
+### How do you use console.log()?
+To use `console.log()`, you simply type it into your code, followed by the message you want to send to the console. If the message consists of words always embed them in quotes if they are numbers, no need, if arithmetic expressions, no need also but if both words and numbers then we use what is called *String Concatenation*. It will be explained better, much later. 
+
+Some examples:
+```
+console.log("Hello, World!");
+
+console.log(5);
+
+console.log(1+3);
+```
+
+When you run these code snippets, the messages will be:
+
+Hello, World!
+5
+4
+
+These will appear in the console.
+
+Id you noticed, every line or console.log ended with a semicolon ---> `;`. So everytime you use a `console.log` , end it with a semicolon. 
+
+### Why is console.log() useful?
+`console.log()` is useful because it allows you to see what's happening in your code. You can use it to:
+
+- Test whether your code is working correctly
+- Display messages to the user
+- Debug your code (find and fix errors)
+
+
