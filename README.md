@@ -1,5 +1,7 @@
 # JavaScript Beginner's Guide
 
+![JS image](Screenshot_20250120-055547_1.png)
+
 ## Introduction
 
 Welcome to this extensive guide built for the aspiring JavaScript beginner. It is an endeavor to put forth a very clear and precise primer on JavaScript. This would be needed by beginners who could be familiar with either HTML5 and CSS or complete beginners in the development of web pages.
@@ -26,6 +28,8 @@ Although prior knowledge of HTML5 and CSS is helpful, it's by no means required.
 Welcome to the world of JavaScript where you'll learn how to create dynamic, interactive web experiences. I hope this guide will be well on your way to becoming proficient in JavaScript.
 
 ## Printing to the Console
+
+![the console on chrome browser](the-console-panel-next-t-9c932aff8f795.png)
 
 This means to display output of one's code on a specific interface called the console. 
 
