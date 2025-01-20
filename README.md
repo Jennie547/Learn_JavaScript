@@ -147,6 +147,70 @@ To evaluate this expression, follow the order of operations:
 
 Therefore, `result` equals `45`.
 
-How cool is that?!
+## Variables in JavaScript
+
+Variables are containers or boxes that store values. Think of them as a place with space which can be empty or not or simply can hold values of any kind if defined rightly. In JavaScript, you can declare variables using the `let`, `const`, or `var` keywords.
+
+### Defining Variables
+Declaring variables is the first step of creating/defining a variable by writing the keyword followed by the variable name.
+
+Then assigning a value to the variable is the next step. However, when defining a variable to be empty for whatever purpose, it's not assigned to any value. 
+Let's examine the keywords used to declare or create variables in JavaScript. 
+
+*let*
+`let` is used to declare variables that can be reassigned.
+
+```
+let name = 'John Doe';
+console.log(name); // Output: John Doe
+name = 'Jane Doe';
+console.log(name); // Output: Jane Doe
+```
+
+*const*
+`const` is used to declare variables that cannot be reassigned.
+
+```
+const PI = 3.14;
+console.log(PI); // Output: 3.14
+PI = 2.71; // Error: Assignment to constant variable.
+```
+
+*var*
+`var` is used to declare variables that can be reassigned. However, `var` has function scope, whereas `let` and `const` have block scope.
+
+```
+var name = 'John Doe';
+console.log(name); // Output: John Doe
+name = 'Jane Doe';
+console.log(name); // Output: Jane Doe
+```
+
+### Variable Naming Rules
+1. Variable names can contain letters (a-z, A-Z), numbers (0-9), and underscores (_), for example: person1, is_user_online, isAvailable.
+2. Variable names cannot start with numbers that is `1num` will be invalid, instead use `num1`
+3. Variable names cannot contain special characters (!, @, #, $, etc.) except for underscores (_).
+4. Variable names are case-sensitive meaning `name` will be different from `Name`. 
+
+Naming variables in JavaScript can be:
+- Camel case: making ever initial letter capitalized. E.g `isUserOnline`
+- Snake case: using underscore to join words. E.g is_user_online. 
+
+### Variable Scope
+- *Global Scope*: Variables declared outside of any function or block have global scope.
+- *Function Scope*: Variables declared within a function have function scope.
+- *Block Scope*: Variables declared within a block (e.g., `if`, `for`, `while`) have block scope.
+
+### Variable Hoisting
+JavaScript "hoists" variable declarations to the top of their scope. This means that variables are moved to the top of their scope, regardless of where they are actually declared.
+
+```
+console.log(name); // Output: undefined
+var name = 'John Doe';
+```
+
+In this example, the `name` variable is hoisted to the top of its scope, so `console.log(name)` outputs `undefined` instead of throwing an error.
+
+Conclusively, variables are a fundamental concept in JavaScript, and understanding how to declare, scope, and hoist them is crucial for writing effective code. By following the rules and best practices outlined in this explanation, you'll be well on your way to becoming a proficient JavaScript developer.
 
 
