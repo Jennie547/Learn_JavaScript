@@ -77,4 +77,76 @@ _________
 4. Display to the console the title of your favorite movie
 5. Print the quotient of 15 and 3 to the console  
 
+## Numbers and Math in JavaScript
+
+Let's focus on numbers now and later we talk about letters, words and statements. JavaScript provides various ways to work with numbers and perform mathematical operations. Let's head on to knowing the types of numbers in JavaScript. 
+
+### Number Types
+JavaScript has two main number types. Don't get confused, it's the same as in Mathematics. We have *whole numbers* and *fractions* or specifically let's stick to *decimals* or *decimal numbers*. That said:
+
+1. *Integers*: Whole numbers, either positive, negative, or zero (e.g., `1`, `-5`, `0`).
+2. *Floating-Point Numbers*: Decimal numbers (e.g., `3.14`, `-0.5`).
+
+### Mathematical Operations
+JavaScript supports basic arithmetic operations:
+
+*Addition (+)*
+```
+console.log(5 + 3);  // sum = 8
+```
+
+*Subtraction (-)*
+```
+console.log(10 - 4);  // difference = 6
+```
+
+*Multiplication* (*)
+```
+console.log(7 * 2) ;  // product = 14
+```
+
+*Division (/)*
+```
+console.log(9 / 3) ;  // quotient = 3
+```
+
+*Modulus (%)*
+```
+console.log(17 % 5);  // remainder = 2
+```
+
+*Exponentiation* (**)
+```
+console.log(2 ** 3);  // result = 8
+```
+
+Modulus: display ls remainder
+
+Exponent: displays the result of the first number with an index of the second
+
+### Order of Operations
+JavaScript follows the standard order of operations (PEMDAS):
+
+1. *P*arentheses: Evaluate expressions inside parentheses first.
+2. *E*xponents: Evaluate any exponential expressions next.
+3. *M*ultiplication and *D*ivision: Evaluate multiplication and division operations from left to right.
+4. *A*ddition and *S*ubtraction: Finally, evaluate any addition and subtraction operations from left to right.
+
+Example
+```
+console.log(2 + 3 * 4 ** 2 - 10 / 2);
+```
+
+To evaluate this expression, follow the order of operations:
+
+1. Exponents: `4 ** 2 = 16`
+2. Multiplication: `3 * 16 = 48`
+3. Addition: `2 + 48 = 50`
+4. Division: `10 / 2 = 5`
+5. Subtraction: `50 - 5 = 45`
+
+Therefore, `result` equals `45`.
+
+How cool is that?!
+
 
