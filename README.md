@@ -67,5 +67,14 @@ Id you noticed, every line or console.log ended with a semicolon ---> `;`. So ev
 - Test whether your code is working correctly
 - Display messages to the user
 - Debug your code (find and fix errors)
+_________
+
+### Giveaway Exercises
+
+1. Print your name to the console
+2. Display the sum of your age and your favorite number
+3. To the console result the difference between this year and your year of birth
+4. Display to the console the title of your favorite movie
+5. Print the quotient of 15 and 3 to the console  
 
 
