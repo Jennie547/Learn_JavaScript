@@ -265,7 +265,78 @@ let isAdmin = true;
 console.log(typeof isAdmin); // Output: boolean
 ```
 
-Understanding the different data types in JavaScript is essential for writing effective and efficient code. 
+Understanding the different data types in JavaScript is essential for writing effective and efficient code.
+
+## String Interpolation
+String interpolation in JavaScript is a way to embed variables or expressions directly into a string using template literals. Template literals are enclosed by backticks (`), and the values to be interpolated are placed inside ${}.
+
+### Basic Syntax
+
+1. Use backticks (`) to define a string.
+
+2. Insert expressions or variables inside the ${} placeholder.
+
+Example:
+
+```
+const name = "Alice";
+const age = 25;
+
+const message = `My name is ${name} and I am ${age} years old.`;
+console.log(message);
+// Output: My name is Alice and I am 25 years old. 
+```
+
+### Features of String Interpolation
+
+1. Embedding Variables:
+
+```
+const city = "New York";
+console.log(`I live in ${city}.`);
+// Output: I live in New York.
+```
+
+2. Embedding Expressions:
+
+```
+const a = 10;
+const b = 5;
+console.log(`The sum of ${a} and ${b} is ${a + b}.`);
+// Output: The sum of 10 and 5 is 15.
+```
+
+### Nested Interpolation
+
+You can even use nested templates or complex expressions. Usually a template literal within an interpolated string expression  
+
+Example:
+
+```
+const name = "Emma";
+const price = 50;
+const discount = 10;
+
+const message = `Hello ${name}, the price after a ${discount}% discount is $${price - (price * discount) / 100}.`;
+console.log(message);
+// Output: Hello Emma, the price after a 10% discount is $45.
+```
+
+---
+
+Practice Exercise
+
+Try this example:
+
+```
+const product = "Laptop";
+const price = 1200;
+const discount = 200;
+
+console.log(`The ${product} costs $${price - discount} after a $${discount} discount.`); 
+```
+
+Guess the output!
 
 ## Booleans and Conditional Statements in JavaScript
 
@@ -357,5 +428,241 @@ console.log(status); // Output: adult
 
 By mastering these concepts, you can write more efficient, effective, and decision-driven code.
 
+## Functions in JavaScript
+
+Functions are reusable blocks of code that perform a specific task. They are a fundamental and very essential aspect of programming not excluding and are used to:
+
+- Organize code into logical blocks. This makes the code pleasant to look at and also easy to revise. 
+- Reduce code duplication and unnecessary repetition. 
+- Improve code readability and maintainability
+- Create reusable code
+
+### Function Declaration
+A function is declared in JavaScript using the `function` keyword followed by the function name and a list of parameters in parentheses. This is also known as the function structure. 
+
+```
+function_keyword function_name(parameters) {
+				// code_goes_here
+} 
+```
+
+Below is an example of a defined function:
+
+```
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```
+The function above displays on the console, when called, a greeting message. It accepts a single parameter and prints exactly the string "Hello" and the argument passed to the parameter - `name`. Let's learn more about Parameters. 
+
+#### Function Parameters
+Functions can take zero or more parameters, which are values passed to the function when it is called.
+
+```
+function add(a, b) {
+  return a + b;
+}
+```
+
+### Parameters
+In JavaScript, parameters are variables listed inside the parentheses in the function declaration or in a function expression. They act as placeholders for values (called arguments) that are passed to the function when it is called. 
+
+#### Parameters in Function Declarations
+
+When defining a function, you can specify one or more parameters to receive values from the caller. These parameters are declared in the parentheses after the function name.
+
+Example:
+
+```
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+```
+
+`name` is a parameter in this example.
+
+When the function is called, the value provided will replace the parameter name.
+
+##### Arguments vs. Parameters
+
+*Parameters*: are defined in the function declaration to represent input values.
+
+Arguments: are the actual values passed when the function is called.
+
+
+Example:
+
+```
+function add(a, b) {
+  return a + b; // `a` and `b` are parameters
+}
+
+console.log(add(5, 3)); // `5` and `3` are arguments 
+```
+
+#### Multiple Parameters
+
+You can define multiple parameters separated by commas.
+
+Example:
+
+```
+function multiply(x, y, z) {
+  return x * y * z;
+}
+
+console.log(multiply(2, 3, 4)); // Output: 24
+```
+
+#### Default Parameters
+
+JavaScript allows you to set default values for parameters. If no argument is provided for a parameter, the default value is used.
+
+Example:
+
+```
+function greet(name = "Guest") {
+  console.log("Welcome, " + name + "!");
+}
+
+greet(); // Output: Welcome, Guest!
+greet("Alice"); // Output: Welcome, Alice!
+``` 
+
+### Function Expression
+A function can also be defined as an expression, which is a function that is assigned to a variable.
+
+```
+const greet = function(name) {
+  console.log(`Hello, ${name}!`);
+};
+```
+
+#### Arrow Function
+Arrow functions are a concise way to define small functions. They are defined using the `=>` syntax.
+
+```
+const greet = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+```
+
+#### Function Return Value
+Functions can return a value using the `return` statement.
+
+```
+function add(a, b) {
+  return a + b;
+}
+```
+
+#### Function Scope
+Functions have their own scope, which means that variables defined inside a function are not accessible outside of that function.
+
+```
+function greet(name) {
+  let message = `Hello, ${name}!`;
+  console.log(message);
+}
+```
+
+#### Function Hoisting
+Functions are "hoisted" to the top of their scope, which means that they can be called before they are defined.
+
+```
+greet("John");
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```
+
+#### Immediately Invoked Function Expression (IIFE)
+An IIFE is a function that is called immediately after it is defined.
+
+```
+(function() {
+  console.log("This function is called immediately.");
+})();
+```
+
+Here's the list of exercises for practice:
+
+---
+
+Basic Arithmetic Operations
+
+1. Write a function that adds two numbers and returns the result.
+
+2. Write a function that subtracts one number from another and returns the result.
+
+3. Create a function that multiplies two numbers and returns the result.
+
+4. Write a function that divides two numbers and returns the result.
+
+5. Create a function to calculate the remainder of two numbers using the modulus operator.
+
+6. Write a program to calculate the square of a number.
+
+7. Write a function that calculates the result of raising a number to the power of another number.
+
+8. Create a function that calculates the average of three numbers.
+
+9. Write a program that converts an amount from US dollars to another currency (e.g., euros).
+
+10. Create a program to calculate the percentage of a number.
+
+---
+
+Conditional Statements
+
+11. Write a program to check if a number is positive, negative, or zero.
+
+12. Create a function that checks if a given number is even or odd.
+
+13. Write a program to determine if a person is eligible to vote based on their age.
+
+14. Create a program that checks if a given number is divisible by 5.
+
+15. Write a function to check if a number is between 10 and 50 (inclusive).
+
+16. Create a program that determines whether a given temperature (in Celsius) is "cold", "warm", or "hot" (e.g., < 15, between 15–25, > 25).
+
+17. Write a program that takes three numbers and determines which one is the largest.
+
+18. Create a function to check if two numbers are equal.
+
+
+---
+
+Switch Statements
+
+19. Write a program using a switch statement to display the day of the week based on a number (1 for Monday, 2 for Tuesday, etc.).
+
+20. Create a program that takes a grade (A, B, C, D, F) and prints a message (e.g., "Excellent" for A, "Good" for B, etc.).
+
+21. Write a program using a switch statement to calculate the result of two numbers based on an operator (+, -, *, /).
+
+22. Create a program that converts a number between 1 and 12 into the corresponding month name.
+
+23. Write a program using a switch statement to check the size of a T-shirt based on a letter (S, M, L, XL).
+
+
+---
+
+Functions and String Interpolation
+
+24. Write a function that greets a user by their name using string interpolation.
+
+25. Create a function that takes a name and age and returns a string saying, "My name is [name] and I am [age] years old."
+
+26. Write a function that takes two numbers and returns a string like, "The sum of [a] and [b] is [result]."
+
+27. Create a function that calculates the area of a rectangle and returns a string like, "The area of the rectangle is [area]."
+
+28. Write a program that takes a person's first and last name and returns a string saying, "Welcome, [firstName] [lastName]!"
+
+29. Create a function that calculates the price after a discount and returns a message like, "The price after a [discount]% discount is $[finalPrice]."
+
+30. Write a function that takes a temperature in Celsius and converts it to Fahrenheit, returning a message like, "The temperature in Fahrenheit is [value]."
 
 
