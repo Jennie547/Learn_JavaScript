@@ -1,6 +1,6 @@
 # JavaScript Beginner's Guide
 
-![JS image](Screenshot_20250120-055547_1.png)
+![JS image](JS-img.png)
 
 ## Introduction
 
@@ -29,7 +29,7 @@ Welcome to the world of JavaScript where you'll learn how to create dynamic, int
 
 ## Printing to the Console
 
-![the console on chrome browser](the-console-panel-next-t-9c932aff8f795.png)
+![the console on chrome browser](console-panel.png)
 
 This means to display output of one's code on a specific interface called the console. 
 
