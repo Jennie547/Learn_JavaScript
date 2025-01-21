@@ -71,11 +71,11 @@ _________
 
 ### Giveaway Exercises
 
-1. Print your name to the console
-2. Display the sum of your age and your favorite number
-3. To the console result the difference between this year and your year of birth
-4. Display to the console the title of your favorite movie
-5. Print the quotient of 15 and 3 to the console  
+1. Print your name to the console  ✅
+2. Display the sum of your age and your favorite number ✅
+3. To the console result the difference between this year and your year of birth ✅
+4. Display to the console the title of your favorite movie ✅
+5. Print the quotient of 15 and 3 to the console ✅
 
 ## Numbers and Math in JavaScript
 
@@ -591,17 +591,17 @@ Here's the list of exercises for practice:
 
 Basic Arithmetic Operations
 
-1. Write a function that adds two numbers and returns the result.
+1. Write a function that adds two numbers and returns the result. ✅
 
-2. Write a function that subtracts one number from another and returns the result.
+2. Write a function that subtracts one number from another and returns the result. ✅
 
-3. Create a function that multiplies two numbers and returns the result.
+3. Create a function that multiplies two numbers and returns the result. ✅
 
-4. Write a function that divides two numbers and returns the result.
+4. Write a function that divides two numbers and returns the result. ✅
 
-5. Create a function to calculate the remainder of two numbers using the modulus operator.
+5. Create a function to calculate the remainder of two numbers using the modulus operator. ✅
 
-6. Write a program to calculate the square of a number.
+6. Write a program to calculate the square of a number. 
 
 7. Write a function that calculates the result of raising a number to the power of another number.
 
