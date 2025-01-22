@@ -456,7 +456,7 @@ function greet(name) {
 The function above displays on the console, when called, a greeting message. It accepts a single parameter and prints exactly the string "Hello" and the argument passed to the parameter - `name`. Let's learn more about Parameters. 
 
 #### Function Parameters
-Functions can take zero or more parameters, which are values passed to the function when it is called.
+Functions can take zero or more parameters, which are variables to hold the values passed to the function when it is called.
 
 ```
 function add(a, b) {
@@ -666,3 +666,120 @@ Functions and String Interpolation
 30. Write a function that takes a temperature in Celsius and converts it to Fahrenheit, returning a message like, "The temperature in Fahrenheit is [value]."
 
 
+## Scope And Hoisting in JavaScript 
+
+### Variable Scope in JavaScript
+
+Variable scope refers to the region of the code where a variable is defined and can be accessed. It explains where a variable can be seen and thus used. In JavaScript, variables have different scopes depending on where they are declared or defined.
+
+### Global Scope
+Variables declared outside of any function or block have global scope. This means they can be accessed from anywhere in the code.
+
+```
+let globalVariable = 'I am global';
+
+function myFunction() {
+  console.log(globalVariable); // Output: I am global
+}
+
+myFunction();
+console.log(globalVariable); // Output: I am global
+```
+
+### Function Scope
+Variables declared within a function have function scope. This means they can only be accessed within that function.
+
+```
+function myFunction() {
+  let functionVariable = 'I am local to this function';
+  console.log(functionVariable); // Output: I am local to this function
+}
+
+myFunction();
+console.log(functionVariable); // Error: functionVariable is not defined
+```
+
+### Block Scope
+Variables declared within a block (e.g., `if`, `for`, `while`) have block scope. This means they can only be accessed within that block.
+
+```
+if (true) {
+  let blockVariable = 'I am local to this block';
+  console.log(blockVariable); // Output: I am local to this block
+}
+
+console.log(blockVariable); // Error: blockVariable is not defined
+```
+
+### Let and Const vs Var
+It's essential to note that `let` and `const` have block scope, whereas `var` has function scope.
+
+```
+if (true) {
+  var varVariable = 'I am function scoped';
+  let letVariable = 'I am block scoped';
+  const constVariable = 'I am also block scoped';
+}
+
+console.log(varVariable); // Output: I am function scoped
+console.log(letVariable); // Error: letVariable is not defined
+console.log(constVariable); // Error: constVariable is not defined
+```
+
+So, defining a variable using the keywords `let` and `const` will be according to the set scope whereas, var is accessible anywhere within the function it's created even if embedded within a block. Understanding variable scope is crucial in JavaScript, as it helps you write more organized, efficient, and error-free code.
+
+### Hoisting in JavaScript
+
+Hoisting is a fundamental concept in JavaScript that can be a bit confusing, but it's essential to understand how it works.
+
+#### What is Hoisting?
+Hoisting is the process by which JavaScript moves variable and function declarations to the top of their scope, regardless of where they are actually declared. This means that variables and functions are "hoisted" to the top of their scope, making them available for use before they are actually declared. Note **declared** and not **defined**, this leaves out the value even if the variable is given one. 
+
+#### Variable Hoisting
+When a variable is declared using `var`, it is "hoisted" to the top of its scope. This means that the variable is moved to the top of its scope, regardless of where it is actually declared.
+
+```
+console.log(name); // Output: undefined
+var name = 'John Doe';
+```
+
+In this example, the `name` variable is hoisted to the top of its scope, meaning it's been sort of declared as every variable without a value in JS is considered *undefined*, so `console.log(name)` outputs `undefined` instead of throwing an error.
+
+#### Function Hoisting
+When a function is defined using the `function` keyword, it is "hoisted" to the top of its scope. This means that the function is moved to the top of its scope, regardless of where it is actually defined.
+
+```
+greet(); // Output: Hello, World!
+function greet() {
+  console.log('Hello, World!');
+}
+```
+
+In this example, the `greet` function is hoisted to the top of its scope, so calling `greet()` before it is actually declared and defined works as expected.
+
+This is because function declarations are statements that begin with the `function` keyword, followed by the function name and parameters. When JavaScript encounters a function declaration, it creates a function object and assigns it to the variable with the same name as the function while variable declarations, on the other hand, are statements that begin with the `var`, `let`, or `const` keywords, followed by the variable name. When JavaScript encounters a variable declaration, it creates a variable with the given name, but does not assign a value to it until the assignment is executed.
+
+So, basically, function hoisting works as expected because both the function declaration and definition are moved to the top, whereas variable hoisting only moves the declaration, leaving the variable `undefined` until the assignment is executed. 
+
+#### Let and Const Hoisting
+When a variable is declared using `let` or `const`, it is not "hoisted" in the same way as `var`. Instead, `let` and `const` variables are subject to a concept called the "Temporal Dead Zone" (TDZ).
+
+The TDZ refers to the period between the start of the scope and the actual declaration of the variable. During this time, the variable is not accessible, and attempting to access it will result in a `ReferenceError`.
+
+```
+console.log(name); // ReferenceError: name is not defined
+let name = 'John Doe';
+```
+
+In this example, attempting to access the `name` variable before it is actually declared results in a `ReferenceError`, because the variable is in the TDZ.
+
+#### Best Practices
+To avoid issues with hoisting, it's a good idea to follow these best practices:
+
+- Declare variables and functions at the top of their scope.
+- Use `let` and `const` instead of `var` to avoid unexpected behavior.
+- Avoid using variables or functions before they are actually declared.
+
+By following these best practices, you can write more predictable and maintainable code. 
+
+## Objects in JavaScript
